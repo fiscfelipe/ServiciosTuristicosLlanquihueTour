@@ -35,3 +35,11 @@ Cada subclase hereda los atributos de la superclase, utiliza `super(...)` en su 
 2. Ejecutar la clase `Main`, ubicada en el paquete `app`.
 3. El programa mostrará por consola un menú interactivo con 8 opciones, 7 correspondientes a lo acumulado a través del bimestre y una nueva opción (opción 7)    la cual muestra objetos de prueba de las clases creadas esta semana.
 4. Seleccionar la opción 7 para ver los ejemplos.
+
+---
+
+## Autor
+
+Felipe Saldías
+
+Estudiante de la carrera de Analista Programador Computacional en DuocUC
