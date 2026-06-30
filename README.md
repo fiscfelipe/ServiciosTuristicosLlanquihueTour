@@ -1,4 +1,4 @@
-# # LlanquihueTourApp
+# LlanquihueTourApp
 
 ## Descripción del objetivo semanal
 
