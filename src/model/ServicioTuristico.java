@@ -1,0 +1,47 @@
+package model;
+
+/**
+ * Clase que representa un servicio turistico de Llanquihue Tour
+ */
+public abstract class ServicioTuristico {
+
+    private String nombre;
+    private int duracionHoras;
+
+    /**
+     * Constructor de la clase ServicioTuristico
+     * @param nombre            Nombre del servicio turístico.
+     * @param duracionHoras     Duración del servicio turístico.
+     */
+    public ServicioTuristico(String nombre, int duracionHoras) {
+        this.nombre = nombre;
+        this.duracionHoras = duracionHoras;
+    }
+
+    //Setters
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setDuracionHoras(int duracionHoras) {
+        this.duracionHoras = duracionHoras;
+    }
+
+    //Getters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getDuracionHoras() {
+        return duracionHoras;
+    }
+
+    //Métodos
+    public abstract void mostrarInformacion();
+
+    @Override
+    public String toString() {
+        return "Nombre del servicio: " + nombre +
+                "\nDuracion: " + duracionHoras + " horas";
+    }
+}
