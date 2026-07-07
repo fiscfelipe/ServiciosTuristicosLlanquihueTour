@@ -2,19 +2,48 @@
 
 ## Descripción del objetivo semanal
 
-Esta actualización del proyecto incorpora una jerarquía de clases mediante herencia simple para representar los distintos servicios turísticos ofrecidos por la agencia Llanquihue Tour.
+Esta actualización del proyecto incorpora el uso de **polimorfismo** y **colecciones genéricas** para gestionar los distintos servicios turísticos ofrecidos por la agencia Llanquihue Tour.
 
-Se implementó una superclase llamada `ServicioTuristico`, que reúne los atributos comunes de todos los servicios, y tres subclases que representan distintos tipos de actividades turísticas:
+Se implementó el método abstracto `mostrarInformacion()` en la superclase `ServicioTuristico`, el cual fue sobrescrito por las subclases `RutaGastronomica`, `PaseoLacustre` y `ExcursionCultural`, permitiendo que cada una muestre su información específica.
 
-- RutaGastronomica
-- PaseoLacustre
-- ExcursionCultural
-
-Cada subclase hereda los atributos de la superclase, utiliza `super(...)` en su constructor y sobrescribe el método `toString()` para mostrar su información específica.
+Además, se creó una colección de tipo `List<ServicioTuristico>` para almacenar objetos de las diferentes subclases en una misma estructura de datos. Finalmente, la colección es recorrida mediante un ciclo `for-each`, invocando el método `mostrarInformacion()` desde referencias de la superclase, demostrando la aplicación del polimorfismo.
 
 ---
 
-## Clases creadas
+## Estructura del proyecto
+
+```
+src
+├── ui
+│   └── Main.java
+├── data
+│   └── GestorServicios.java
+├── model
+│   ├── ServicioTuristico.java
+│   ├── RutaGastronomica.java
+│   ├── PaseoLacustre.java
+│   ├── ExcursionCultural.java
+│   ├── Persona.java
+│   ├── ProveedorAlojamiento.java
+│   ├── ProveedorTransporte.java
+│   ├── Direccion.java
+│   ├── Rut.java
+│   ├── Correo.java
+│   ├── Patente.java
+│   ├── Vehiculo.java
+│   └── Alojamiento.java
+├── service
+│   └── RegistroService.java
+├── util
+│   ├── CorreoInvalidoException.java
+│   ├── PatenteInvalidaException.java
+│   └── RutInvalidoException.java
+└── resources
+    └── registro.txt
+```
+---
+
+## Clases modificadas
 
 ### Paquete `model`
 
@@ -32,9 +61,9 @@ Cada subclase hereda los atributos de la superclase, utiliza `super(...)` en su 
 ## Instrucciones de ejecución
 
 1. Abrir el proyecto **LlanquihueTourApp** en NetBeans.
-2. Ejecutar la clase `Main`, ubicada en el paquete `app`.
-3. El programa mostrará por consola un menú interactivo con 8 opciones, 7 correspondientes a lo acumulado a través del bimestre y una nueva opción (opción 7)    la cual muestra objetos de prueba de las clases creadas esta semana.
-4. Seleccionar la opción 7 para ver los ejemplos.
+2. Ejecutar la clase `Main`, ubicada en el paquete `ui`.
+3. El programa mostrará por consola un menú interactivo con 8 opciones, 7 correspondientes a lo acumulado a través del bimestre y una nueva opción (opción 7)    la cual muestra la lista creada esta semana.
+4. Seleccionar la opción 7 para ver la lista.
 
 ---
 
